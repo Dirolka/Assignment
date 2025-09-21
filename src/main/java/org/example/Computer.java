@@ -2,6 +2,11 @@ package org.example;
 
 public class Computer {
     private String HDD;
+
+    public void setRAM(String RAM) {
+        this.RAM = RAM;
+    }
+
     private String RAM;
     private String CPU;
 
@@ -18,13 +23,9 @@ public class Computer {
         this.isBluetoothEnabled = builder.isBluetoothEnabled;
     }
 
+    @Override
     public String toString() {
-        return "Computer [HDD=" + HDD +
-                ", RAM=" + RAM +
-                ", CPU=" + CPU +
-                ", GPU=" + GPU +
-                ", GraphicsCard=" + isGraphicsCardEnabled +
-                ", Bluetooth=" + isBluetoothEnabled + "]";
+        return "Computer [HDD=" + HDD + ", RAM=" + RAM + ", CPU=" + CPU + ", GPU=" + GPU + ", GraphicsCard=" + isGraphicsCardEnabled + ", Bluetooth=" + isBluetoothEnabled + "]";
     }
 
     public static class ComputerBuilder {
